@@ -7,7 +7,7 @@ before_install:
   - docker build -t caioaanolasco/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true 0acf119792fe npm run test -- --watchAll=false
+  - docker run -e CI=true caioaanolasco/docker-react npm run test -- --watchAll=false
 
 deploy:
   provider: elasticbeanstalk
